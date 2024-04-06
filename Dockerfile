@@ -5,7 +5,7 @@ EXPOSE 3000
 
 WORKDIR /app
 COPY . .
-RUN npm pkg delete scripts.prepare && npm ci
+RUN npm install
 RUN npm run build
 
 ENV PORT 3000
