@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-gh-action-ecs-ecr",
+  "name": "nextjs-gh-action-ecs",
   "description": "Deployment example of next.js with github action to AWS ECS/ECR",
   "version": "0.1.0",
   "author": "Aaron Delasy <aaron@thelang.io>",
