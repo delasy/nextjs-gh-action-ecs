@@ -5,7 +5,7 @@ EXPOSE 3000
 
 WORKDIR /app
 COPY . .
-RUN npm ci
+RUN npm set-script prepare "" && npm ci
 RUN npm run build
 
 ENV PORT 3000
