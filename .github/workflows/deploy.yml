@@ -4,6 +4,10 @@ on:
   push:
     branches: [dev, staging, main]
 
+concurrency:
+  cancel-in-progress: true
+  group: deploy-${{ github.event.pull_request.number || github.sha }}
+
 env:
   AWS_ECR_REPOSITORY: ${{ secrets.AWS_ECR_REPOSITORY }}
   AWS_ECS_CONTAINER: ${{ secrets.AWS_ECS_CONTAINER }}
