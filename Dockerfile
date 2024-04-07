@@ -23,5 +23,5 @@ RUN chown nextjs:nodejs .next
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 USER nextjs
-EXPOSE 80
-CMD HOSTNAME="0.0.0.0" PORT="80" node server.js
+EXPOSE 3000
+CMD HOSTNAME="0.0.0.0" node server.js
